@@ -1,9 +1,11 @@
 import requests
+from config import TOKEN_BOT, API
 
-TOKEN = "6515113216:AAGXOJFt7TCsu2FD7zeqjfff3cYck8wnfME"
+
+TOKEN = TOKEN_BOT
 def city_weather(city):
     OWM_Endpoint = "https://api.openweathermap.org/data/2.5/weather"
-    api_key = "78d610c0a7b763d5188c2366d3592db8"
+    api_key = API
 
     weather_params = {
         'q': f'{city}',

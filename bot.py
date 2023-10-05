@@ -1,4 +1,5 @@
 import asyncio
+import sys
 import logging
 from keyboard import keyboard_new
 from aiogram.enums import ParseMode
@@ -28,22 +29,22 @@ async def city_kyiv(message: types.Message):
 
 
 @dp.message(F.text == "Dnepr")
-async def city_dne(message: types.Message):
+async def city_dnepr(message: types.Message):
     await message.answer(city_weather('Dnepr'))
 
 
 @dp.message(F.text == "Lviv")
-async def city_lv(message: types.Message):
+async def city_lviv(message: types.Message):
     await message.answer(city_weather('Lviv'))
 
 
 @dp.message(F.text == "Kharkiv")
-async def city_kh(message: types.Message):
+async def city_kha(message: types.Message):
     await message.answer(city_weather('Kharkiv'))
 
 
 @dp.message(F.text == "Odessa")
-async def city_od(message: types.Message):
+async def city_ode(message: types.Message):
     await message.answer(city_weather('Odessa'))
 
 
@@ -53,5 +54,6 @@ async def main():
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, stream=sys.stdout)
     asyncio.run(main())
 
