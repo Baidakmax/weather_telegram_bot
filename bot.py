@@ -1,18 +1,12 @@
 import asyncio
 import logging
-import sys
 from keyboard import keyboard_new
 from aiogram.enums import ParseMode
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import CommandStart, Command
 from weather_requests import city_weather, TOKEN
 
-
-
-
 dp = Dispatcher()
-
-
 
 @dp.message(CommandStart())
 async def cmd_start(message: types.Message):
@@ -53,15 +47,11 @@ async def city_od(message: types.Message):
     await message.answer(city_weather('Odessa'))
 
 
-
-
-
 async def main():
     bot = Bot(TOKEN, parse_mode=ParseMode.HTML)
     await dp.start_polling(bot)
 
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO, stream=sys.stdout)
     asyncio.run(main())
 

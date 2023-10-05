@@ -1,5 +1,4 @@
 import requests
-import os
 
 TOKEN = "6515113216:AAGXOJFt7TCsu2FD7zeqjfff3cYck8wnfME"
 def city_weather(city):
