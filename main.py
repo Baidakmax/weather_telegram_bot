@@ -7,7 +7,7 @@ from aiogram import Bot, Dispatcher, types, Router
 from aiogram.filters import CommandStart, Command
 from weather_requests import TOKEN
 from handlers import bot_functionality
-from middleware import SomeMiddleWare
+from middlewares.middleware import SomeMiddleWare
 
 
 dp = Dispatcher()
