@@ -10,7 +10,7 @@ kb = [
     ],
 ]
 keyboard_new = types.ReplyKeyboardMarkup(
-    keyboard= kb,
+    keyboard=kb,
     resize_keyboard=True,
     input_field_placeholder="Choose a city"
 )
